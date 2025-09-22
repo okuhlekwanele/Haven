@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Twitter, Instagram, Mail, Phone, MapPin, Lock, Shirt } from 'lucide-react';
+import { Facebook, Twitter, Instagram, Mail, Phone, MapPin, Lock, Flower2 } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -10,18 +10,18 @@ const Footer: React.FC = () => {
           {/* Brand Section */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="bg-blue-600 p-2 rounded-lg">
-                <Shirt className="h-6 w-6 text-white" />
+              <div className="bg-amber-600 p-2 rounded-lg">
+                <Flower2 className="h-6 w-6 text-white" />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-white">StyleCraft</h3>
-                <p className="text-xs text-gray-400">BOUTIQUE</p>
+                <h3 className="text-xl font-bold text-white">Honeybush</h3>
+                <p className="text-xs text-gray-400">HAVEN</p>
               </div>
             </div>
             <p className="text-gray-400 text-sm">
-              Crafting style, defining elegance. Your premier destination for curated fashion and timeless pieces.
+              Natural wellness and skincare crafted with pure honeybush. Your sanctuary for authentic, earth-inspired beauty.
             </p>
-            <div className="flex items-center space-x-1 text-emerald-400">
+            <div className="flex items-center space-x-1 text-amber-400">
               <Lock className="h-4 w-4" />
               <span className="text-xs">SSL Secured</span>
             </div>
@@ -57,26 +57,26 @@ const Footer: React.FC = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4" />
-                <span>hello@stylecraftboutique.com</span>
+                <span>hello@honeybushhaven.com</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4" />
-                <span>123 Fashion St, Style City</span>
+                <span>123 Botanical Ave, Wellness City</span>
               </div>
             </div>
             
             <div className="mt-4">
               <h5 className="font-medium mb-2 text-sm">Follow Us</h5>
               <div className="flex space-x-3">
-                <a href="https://facebook.com/stylecraftboutique" target="_blank" rel="noopener noreferrer" 
+                <a href="https://facebook.com/honeybushhaven" target="_blank" rel="noopener noreferrer" 
                    className="text-gray-400 hover:text-blue-500 transition-colors">
                   <Facebook className="h-5 w-5" />
                 </a>
-                <a href="https://twitter.com/stylecraftboutique" target="_blank" rel="noopener noreferrer"
+                <a href="https://twitter.com/honeybushhaven" target="_blank" rel="noopener noreferrer"
                    className="text-gray-400 hover:text-blue-400 transition-colors">
                   <Twitter className="h-5 w-5" />
                 </a>
-                <a href="https://instagram.com/stylecraftboutique" target="_blank" rel="noopener noreferrer"
+                <a href="https://instagram.com/honeybushhaven" target="_blank" rel="noopener noreferrer"
                    className="text-gray-400 hover:text-pink-500 transition-colors">
                   <Instagram className="h-5 w-5" />
                 </a>
@@ -88,10 +88,10 @@ const Footer: React.FC = () => {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-gray-400">
-              © 2024 StyleCraft Boutique. All rights reserved.
+              © 2024 Honeybush Haven. All rights reserved.
             </p>
             <p className="text-sm text-gray-400 mt-2 md:mt-0">
-              <span className="font-bold">Suggested Domain:</span> stylecraftboutique.com
+              <span className="font-bold">Suggested Domain:</span> honeybushhaven.com
             </p>
           </div>
         </div>
