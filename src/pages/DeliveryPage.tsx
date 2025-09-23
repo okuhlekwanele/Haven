@@ -23,7 +23,7 @@ const DeliveryPage: React.FC = () => {
             <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-600">
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Standard Delivery</h3>
               <div className="space-y-2 text-gray-600">
-                <p><strong>Cost:</strong> $9.99 (Free on orders over $100)</p>
+                <p><strong>Cost:</strong> R149.99 (Free on orders over R1500)</p>
                 <p><strong>Time:</strong> 5-7 business days</p>
                 <p><strong>Tracking:</strong> Included</p>
                 <p><strong>Coverage:</strong> Nationwide</p>
@@ -33,7 +33,7 @@ const DeliveryPage: React.FC = () => {
             <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-emerald-600">
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Express Delivery</h3>
               <div className="space-y-2 text-gray-600">
-                <p><strong>Cost:</strong> $19.99</p>
+                <p><strong>Cost:</strong> R299.99</p>
                 <p><strong>Time:</strong> 2-3 business days</p>
                 <p><strong>Tracking:</strong> Real-time updates</p>
                 <p><strong>Coverage:</strong> Major cities</p>
@@ -43,7 +43,7 @@ const DeliveryPage: React.FC = () => {
             <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-amber-600">
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Next Day Delivery</h3>
               <div className="space-y-2 text-gray-600">
-                <p><strong>Cost:</strong> $29.99</p>
+                <p><strong>Cost:</strong> R449.99</p>
                 <p><strong>Time:</strong> 1 business day</p>
                 <p><strong>Tracking:</strong> Real-time updates</p>
                 <p><strong>Coverage:</strong> Selected areas</p>
@@ -53,7 +53,7 @@ const DeliveryPage: React.FC = () => {
             <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-purple-600">
               <h3 className="text-xl font-semibold text-gray-900 mb-3">International Shipping</h3>
               <div className="space-y-2 text-gray-600">
-                <p><strong>Cost:</strong> Starting from $39.99</p>
+                <p><strong>Cost:</strong> Starting from R599.99</p>
                 <p><strong>Time:</strong> 7-14 business days</p>
                 <p><strong>Tracking:</strong> International tracking</p>
                 <p><strong>Coverage:</strong> 50+ countries</p>
@@ -89,7 +89,7 @@ const DeliveryPage: React.FC = () => {
                 <Globe className="h-12 w-12 text-purple-600 mx-auto mb-4" />
                 <h3 className="font-semibold text-gray-900 mb-2">Delivery</h3>
                 <p className="text-gray-600">During business hours</p>
-                <p className="text-sm text-gray-500 mt-2">Signature required for orders over $200</p>
+                <p className="text-sm text-gray-500 mt-2">Signature required for orders over R3000</p>
               </div>
             </div>
           </div>
