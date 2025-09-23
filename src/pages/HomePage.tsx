@@ -12,18 +12,18 @@ const HomePage: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
-                Natural Wellness,
-                <span className="text-yellow-300"> Pure Beauty</span>
+                Honeybush Haven
+                <span className="text-yellow-300"> Signature Collection</span>
               </h1>
               <p className="text-xl text-amber-100 leading-relaxed">
-                Discover the power of honeybush with our carefully crafted collection of natural skincare and wellness products. Each item is lovingly made to nourish your body and soul with pure, botanical goodness.
+                Experience our signature line of honeybush-infused skincare and wellness products. From our luxurious Glow Cream to our soothing tea blends, each product captures the essence of South African botanical heritage.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   to="/products"
                   className="bg-yellow-500 hover:bg-yellow-600 text-amber-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center group"
                 >
-                  Explore Products
+                  Shop Collection
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link
@@ -96,12 +96,12 @@ const HomePage: React.FC = () => {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Featured Products</h2>
             <p className="text-xl text-gray-600">
-              Discover our most loved products, crafted with pure honeybush and natural ingredients
+              Our signature Honeybush Haven collection - where nature meets luxury
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {featuredProducts.map((product) => (
+            {featuredProducts.slice(0, 3).map((product) => (
               <Link
                 key={product.id}
                 to={`/products/${product.id}`}
@@ -175,10 +175,10 @@ const HomePage: React.FC = () => {
       <section className="bg-gradient-to-r from-amber-600 to-yellow-500 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
-            Welcome to Natural Wellness: 15% Off Your First Order
+            Discover Honeybush Haven: 15% Off Your First Order
           </h2>
           <p className="text-yellow-100 text-lg mb-6">
-            Use code MZANSI15 at checkout. Start your wellness journey today!
+            Use code HAVEN15 at checkout. Experience the power of honeybush today!
           </p>
           <Link
             to="/products"
