@@ -45,7 +45,16 @@ const ProductDetailPage: React.FC = () => {
       }
     });
 
-    alert('Product added to cart!');
+    // Show a more elegant notification
+    const notification = document.createElement('div');
+    notification.className = 'fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50 transition-all duration-300';
+    notification.textContent = 'Product added to cart!';
+    document.body.appendChild(notification);
+    
+    setTimeout(() => {
+      notification.style.opacity = '0';
+      setTimeout(() => document.body.removeChild(notification), 300);
+    }, 2000);
   };
 
   const updateQuantity = (change: number) => {

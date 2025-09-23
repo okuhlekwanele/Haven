@@ -18,11 +18,11 @@ const Header: React.FC = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className="bg-white/95 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-amber-100">
+    <header className="bg-white/80 backdrop-blur-xl shadow-lg sticky top-0 z-50 border-b border-slate-200/60">
       {/* SSL Security Bar */}
-      <div className="bg-gradient-to-r from-amber-700 via-amber-600 to-amber-700 text-white py-1 relative overflow-hidden">
+      <div className="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 text-white py-2 relative overflow-hidden">
         <div className="absolute inset-0 shimmer opacity-20"></div>
-        <div className="max-w-7xl mx-auto px-4 flex items-center justify-center text-sm relative">
+        <div className="max-w-7xl mx-auto px-4 flex items-center justify-center text-sm font-medium relative">
           <Lock className="h-4 w-4 mr-2" />
           <span>Secure SSL Encrypted Shopping</span>
           <Sparkles className="h-3 w-3 ml-2 animate-pulse" />
@@ -30,32 +30,32 @@ const Header: React.FC = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
+        <div className="flex justify-between items-center py-6">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 group">
-            <div className="bg-gradient-to-br from-amber-500 to-amber-700 p-2 rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300 pulse-glow">
-              <Flower2 className="h-8 w-8 text-white group-hover:scale-110 transition-transform duration-300" />
+            <div className="bg-gradient-to-br from-amber-500 to-amber-700 p-3 rounded-2xl shadow-lg group-hover:shadow-xl transition-all duration-500 pulse-glow">
+              <Flower2 className="h-8 w-8 text-white group-hover:scale-110 transition-transform duration-500" />
             </div>
             <div>
-              <h1 className="text-2xl font-bold gradient-text group-hover:scale-105 transition-transform duration-300">Honeybush</h1>
-              <p className="text-xs text-amber-600 tracking-widest">HAVEN</p>
+              <h1 className="text-3xl font-bold gradient-text group-hover:scale-105 transition-transform duration-500">Honeybush</h1>
+              <p className="text-xs text-amber-600 tracking-widest font-medium">HAVEN</p>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex space-x-10">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
-                className={`text-sm font-medium transition-all duration-300 hover:text-amber-600 relative group ${
+                className={`text-sm font-semibold transition-all duration-300 hover:text-amber-600 relative group py-2 ${
                   isActive(item.href) 
                     ? 'text-amber-600' 
-                    : 'text-gray-700'
+                    : 'text-slate-700'
                 }`}
               >
                 {item.name}
-                <span className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-amber-500 to-amber-600 transition-all duration-300 group-hover:w-full ${
+                <span className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-amber-500 to-amber-600 rounded-full transition-all duration-300 group-hover:w-full ${
                   isActive(item.href) ? 'w-full' : ''
                 }`}></span>
               </Link>
@@ -66,11 +66,11 @@ const Header: React.FC = () => {
           <div className="flex items-center space-x-4">
             <Link
               to="/cart"
-              className="relative p-2 text-gray-700 hover:text-amber-600 transition-all duration-300 hover:scale-110 group"
+              className="relative p-3 text-slate-700 hover:text-amber-600 transition-all duration-300 hover:scale-110 group bg-slate-50 hover:bg-amber-50 rounded-2xl"
             >
-              <ShoppingCart className="h-6 w-6 group-hover:animate-pulse" />
+              <ShoppingCart className="h-6 w-6" />
               {state.items.length > 0 && (
-                <span className="absolute -top-1 -right-1 bg-gradient-to-r from-amber-500 to-amber-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center animate-bounce shadow-lg">
+                <span className="absolute -top-2 -right-2 bg-gradient-to-r from-red-500 to-red-600 text-white text-xs rounded-full h-6 w-6 flex items-center justify-center font-bold shadow-lg animate-pulse">
                   {state.items.reduce((sum, item) => sum + item.quantity, 0)}
                 </span>
               )}
@@ -79,7 +79,7 @@ const Header: React.FC = () => {
             {/* Mobile menu button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden p-2 text-gray-700 hover:text-amber-600 transition-all duration-300 hover:scale-110"
+              className="md:hidden p-3 text-slate-700 hover:text-amber-600 transition-all duration-300 hover:scale-110 bg-slate-50 hover:bg-amber-50 rounded-2xl"
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -89,17 +89,17 @@ const Header: React.FC = () => {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white/95 backdrop-blur-md border-t border-amber-100 slide-up">
-          <div className="px-4 py-2 space-y-2">
+        <div className="md:hidden bg-white/90 backdrop-blur-xl border-t border-slate-200/60 slide-up shadow-lg">
+          <div className="px-4 py-4 space-y-2">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
                 onClick={() => setIsMenuOpen(false)}
-                className={`block px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:scale-105 ${
+                className={`block px-4 py-3 rounded-2xl text-sm font-semibold transition-all duration-300 hover:scale-105 ${
                   isActive(item.href)
-                    ? 'text-amber-600 bg-amber-50'
-                    : 'text-gray-700 hover:text-amber-600 hover:bg-gray-50'
+                    ? 'text-amber-600 bg-amber-50 shadow-sm'
+                    : 'text-slate-700 hover:text-amber-600 hover:bg-slate-50'
                 }`}
               >
                 {item.name}
