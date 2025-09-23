@@ -120,7 +120,7 @@ const HomePage: React.FC = () => {
                   </h3>
                   <p className="text-gray-600 mb-4 line-clamp-3">{product.description}</p>
                   <div className="flex justify-between items-center">
-                    <span className="text-2xl font-bold text-amber-600">${product.price}</span>
+                    <span className="text-2xl font-bold text-amber-600">R{product.price.toFixed(2)}</span>
                     <span className="text-sm text-amber-700 font-medium bg-amber-100 px-2 py-1 rounded">Natural</span>
                   </div>
                 </div>
@@ -175,10 +175,10 @@ const HomePage: React.FC = () => {
       <section className="bg-gradient-to-r from-amber-600 to-yellow-500 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
-            Welcome to Natural Wellness: 20% Off Your First Order
+            Welcome to Natural Wellness: 15% Off Your First Order
           </h2>
           <p className="text-yellow-100 text-lg mb-6">
-            Use code NATURAL20 at checkout. Start your wellness journey today!
+            Use code MZANSI15 at checkout. Start your wellness journey today!
           </p>
           <Link
             to="/products"

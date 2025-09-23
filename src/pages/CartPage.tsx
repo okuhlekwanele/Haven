@@ -72,6 +72,7 @@ const CartPage: React.FC = () => {
                         {item.selectedSize && <p>Size: {item.selectedSize}</p>}
                         {item.selectedColor && <p>Color: {item.selectedColor}</p>}
                         <p className="font-medium text-gray-900">${item.price.toFixed(2)} each</p>
+                        <p className="font-medium text-gray-900">R{item.price.toFixed(2)} each</p>
                       </div>
                     </div>
 
@@ -98,7 +99,7 @@ const CartPage: React.FC = () => {
 
                     <div className="text-right">
                       <p className="text-lg font-semibold text-gray-900">
-                        ${(item.price * item.quantity).toFixed(2)}
+                        R{(item.price * item.quantity).toFixed(2)}
                       </p>
                       <button
                         onClick={() => removeItem(item.id)}
@@ -122,31 +123,31 @@ const CartPage: React.FC = () => {
             <div className="space-y-4">
               <div className="flex justify-between">
                 <span className="text-gray-600">Subtotal</span>
-                <span className="font-medium">${state.total.toFixed(2)}</span>
+                <span className="font-medium">R{state.total.toFixed(2)}</span>
               </div>
 
               <div className="flex justify-between">
                 <span className="text-gray-600">Shipping</span>
                 <span className="font-medium">
-                  {state.total >= 100 ? 'Free' : '$9.99'}
+                  {state.total >= 1500 ? 'Free' : 'R149.99'}
                 </span>
               </div>
 
               <div className="flex justify-between">
                 <span className="text-gray-600">Tax</span>
-                <span className="font-medium">${(state.total * 0.08).toFixed(2)}</span>
+                <span className="font-medium">R{(state.total * 0.15).toFixed(2)}</span>
               </div>
 
               <div className="border-t pt-4">
                 <div className="flex justify-between items-center">
                   <span className="text-lg font-semibold text-gray-900">Total</span>
                   <span className="text-2xl font-bold text-blue-600">
-                    ${(state.total + (state.total >= 100 ? 0 : 9.99) + (state.total * 0.08)).toFixed(2)}
+                    R{(state.total + (state.total >= 1500 ? 0 : 149.99) + (state.total * 0.15)).toFixed(2)}
                   </span>
                 </div>
               </div>
 
-              {state.total >= 100 && (
+              {state.total >= 1500 && (
                 <p className="text-sm text-emerald-600 font-medium">
                   🎉 You qualify for free shipping!
                 </p>

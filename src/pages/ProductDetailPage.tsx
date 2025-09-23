@@ -79,7 +79,7 @@ const ProductDetailPage: React.FC = () => {
           <div>
             <h1 className="text-3xl font-bold text-gray-900 mb-2">{product.name}</h1>
             <div className="flex items-center space-x-4 mb-4">
-              <span className="text-3xl font-bold text-blue-600">${product.price}</span>
+              <span className="text-3xl font-bold text-blue-600">R{product.price.toFixed(2)}</span>
               <span className="text-sm text-gray-500 capitalize bg-gray-100 px-3 py-1 rounded-full">
                 {product.category}
               </span>
@@ -156,7 +156,7 @@ const ProductDetailPage: React.FC = () => {
                 </button>
               </div>
               <span className="text-sm text-gray-500">
-                Total: ${(product.price * quantity).toFixed(2)}
+                Total: R{(product.price * quantity).toFixed(2)}
               </span>
             </div>
           </div>
@@ -185,7 +185,7 @@ const ProductDetailPage: React.FC = () => {
           {/* Additional Info */}
           <div className="border-t pt-6">
             <div className="space-y-2 text-sm text-gray-600">
-              <p>• Free shipping on orders over $100</p>
+              <p>• Free shipping on orders over R1500</p>
               <p>• 30-day return policy</p>
               <p>• Secure SSL encrypted checkout</p>
               <p>• Customer support available 24/7</p>
