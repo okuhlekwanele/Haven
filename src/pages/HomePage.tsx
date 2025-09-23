@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Flower2, Leaf, Heart, Star } from 'lucide-react';
 
 const HomePage: React.FC = () => {
@@ -20,9 +21,12 @@ const HomePage: React.FC = () => {
               Discover the natural power of honeybush with our premium collection of wellness and skincare products. 
               Crafted with care from the heart of South Africa's Cederberg region.
             </p>
-            <button className="bg-amber-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-amber-700 transition-colors">
+            <Link 
+              to="/products"
+              className="inline-block bg-amber-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-amber-700 transition-colors"
+            >
               Shop Now
-            </button>
+            </Link>
           </div>
         </div>
       </section>
