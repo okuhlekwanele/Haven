@@ -277,9 +277,9 @@ const CheckoutPage: React.FC = () => {
                       {item.selectedSize && <span>Size: {item.selectedSize}</span>}
                       {item.selectedColor && <span className="ml-2">Color: {item.selectedColor}</span>}
                       <div>Qty: {item.quantity}</div>
+                    </div>
                     <span className="font-medium">R{(item.price * item.quantity).toFixed(2)}</span>
                   </div>
-                  <span className="font-medium">${(item.price * item.quantity).toFixed(2)}</span>
                 </div>
               ))}
             </div>
