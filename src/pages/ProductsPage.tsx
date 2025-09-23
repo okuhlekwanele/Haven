@@ -121,7 +121,7 @@ const ProductsPage: React.FC = () => {
                   </p>
                   <div className="flex justify-between items-center">
                     <span className="text-2xl font-bold text-blue-600">
-                      ${product.price}
+                      R{product.price.toFixed(2)}
                     </span>
                     <span className="text-xs text-gray-500 capitalize bg-gray-100 px-2 py-1 rounded">
                       {product.category}

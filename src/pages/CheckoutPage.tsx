@@ -20,8 +20,8 @@ const CheckoutPage: React.FC = () => {
   const [isProcessing, setIsProcessing] = useState(false);
 
   const subtotal = state.total;
-  const shipping = subtotal >= 100 ? 0 : 9.99;
-  const tax = subtotal * 0.08;
+  const shipping = subtotal >= 1500 ? 0 : 149.99;
+  const tax = subtotal * 0.15;
   const total = subtotal + shipping + tax;
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -250,7 +250,7 @@ const CheckoutPage: React.FC = () => {
               ) : (
                 <>
                   <Lock className="h-5 w-5" />
-                  <span>Place Secure Order - ${total.toFixed(2)}</span>
+                  <span>Place Secure Order - R{total.toFixed(2)}</span>
                 </>
               )}
             </button>
@@ -277,7 +277,7 @@ const CheckoutPage: React.FC = () => {
                       {item.selectedSize && <span>Size: {item.selectedSize}</span>}
                       {item.selectedColor && <span className="ml-2">Color: {item.selectedColor}</span>}
                       <div>Qty: {item.quantity}</div>
-                    </div>
+                    <span className="font-medium">R{(item.price * item.quantity).toFixed(2)}</span>
                   </div>
                   <span className="font-medium">${(item.price * item.quantity).toFixed(2)}</span>
                 </div>
@@ -288,19 +288,19 @@ const CheckoutPage: React.FC = () => {
             <div className="space-y-3 border-t pt-4">
               <div className="flex justify-between">
                 <span className="text-gray-600">Subtotal</span>
-                <span className="font-medium">${subtotal.toFixed(2)}</span>
+                <span className="font-medium">R{subtotal.toFixed(2)}</span>
               </div>
               <div className="flex justify-between">
                 <span className="text-gray-600">Shipping</span>
-                <span className="font-medium">{shipping === 0 ? 'Free' : `$${shipping.toFixed(2)}`}</span>
+                <span className="font-medium">{shipping === 0 ? 'Free' : `R${shipping.toFixed(2)}`}</span>
               </div>
               <div className="flex justify-between">
                 <span className="text-gray-600">Tax</span>
-                <span className="font-medium">${tax.toFixed(2)}</span>
+                <span className="font-medium">R{tax.toFixed(2)}</span>
               </div>
               <div className="flex justify-between items-center pt-3 border-t">
                 <span className="text-lg font-semibold text-gray-900">Total</span>
-                <span className="text-2xl font-bold text-blue-600">${total.toFixed(2)}</span>
+                <span className="text-2xl font-bold text-blue-600">R{total.toFixed(2)}</span>
               </div>
             </div>
 
